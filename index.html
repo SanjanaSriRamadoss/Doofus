@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon — Powered by Doofus AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">amazon</div>
+      <nav class="nav-links">
+        <a href="#" class="nav-link active">Best Sellers</a>
+        <a href="#" class="nav-link">New Releases</a>
+        <a href="#" class="nav-link">Deals</a>
+        <a href="#" class="nav-link">Customer Service</a>
+      </nav>
+    </div>
+    <div class="search-bar">
+      <div class="search-cat-selector">All <span class="caret">▾</span></div>
+      <input type="text" id="search-input" placeholder="Search…" autocomplete="off" />
+      <button class="search-btn" id="search-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </div>
+    <div class="nav-right">
+      <button class="nav-icon-btn" title="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </button>
+      <button class="nav-icon-btn" title="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="user-greeting">
+        <div class="user-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="user-name">Hello, User</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="side-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> All Categories</a>
+        <a href="#" class="side-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Best Sellers</a>
+        <a href="#" class="side-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> New Releases</a>
+        <a href="#" class="side-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg> Customer Service</a>
+        <a href="#" class="side-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Gift Cards</a>
+      </nav>
+      <button class="upgrade-btn">Upgrade Account</button>
+    </aside>
+
+    <main class="content">
+
+      <!-- AI ON STATE -->
+      <section id="ai-on-state" class="state-panel">
+
+        <div class="doofus-panel" id="doofus-panel">
+          <div class="doofus-header">
+            <div class="doofus-identity">
+              <div class="doofus-avatar">🐶</div>
+              <div>
+                <div class="doofus-name-row">
+                  <span class="doofus-name">Doofus</span>
+                  <span class="rag-badge">RAG-VERIFIED</span>
+                </div>
+                <span class="doofus-tagline">Your transparent AI shopping assistant</span>
+              </div>
+            </div>
+            <div class="doofus-controls">
+              <div class="toggle-group">
+                <span class="toggle-label">Doofus AI</span>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="ai-toggle" checked />
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                </label>
+                <span class="toggle-state-label" id="toggle-state-label">ON</span>
+              </div>
+              <button class="prefs-btn" id="prefs-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+                Preferences
+              </button>
+            </div>
+          </div>
+
+          <div class="doofus-intro">
+            <p>Hello! I'm <strong class="accent-text">Doofus</strong> — a smarter, more transparent version of Rufus. I verify answers against the product catalogue before responding, so you get fewer hallucinations and more facts. <span class="highlight-text">You're always in control.</span></p>
+          </div>
+
+          <div class="quick-chips">
+            <button class="chip">🎧 Earbuds under £50</button>
+            <button class="chip">💻 Laptops for students</button>
+            <button class="chip">☕ Best coffee makers</button>
+            <button class="chip">🍳 Air fryer comparison</button>
+          </div>
+
+          <div class="chat-input-row">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask Doofus anything about products…" />
+            <button class="chat-send-btn" id="chat-send-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+
+          <!-- Response area -->
+          <div class="chat-response" id="chat-response" style="display:none;">
+            <div class="response-bubble" id="response-bubble"></div>
+            <div class="response-meta" id="response-meta"></div>
+          </div>
+        </div>
+
+        <!-- Preferences Panel -->
+        <div class="prefs-panel" id="prefs-panel" style="display:none;">
+          <div class="prefs-header">
+            <span>⚙️ AI Preferences</span>
+            <button class="prefs-close-btn" id="prefs-close-btn">✕</button>
+          </div>
+          <div class="pref-row">
+            <div>
+              <div class="pref-label">Use my purchase history</div>
+              <div class="pref-desc">Tailors answers to your habits</div>
+            </div>
+            <label class="toggle-switch sm"><input type="checkbox" id="pref-history" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+          </div>
+          <div class="pref-row">
+            <div>
+              <div class="pref-label">Show source for every claim</div>
+              <div class="pref-desc">Cite product pages &amp; reviews beneath each answer</div>
+            </div>
+            <label class="toggle-switch sm"><input type="checkbox" id="pref-sources" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+          </div>
+          <div class="pref-row">
+            <div>
+              <div class="pref-label">Flag uncertain answers</div>
+              <div class="pref-desc">Show confidence score &amp; bar beneath each answer</div>
+            </div>
+            <label class="toggle-switch sm"><input type="checkbox" id="pref-flag" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+          </div>
+        </div>
+
+        <!-- Bottom grid -->
+        <div class="bottom-grid">
+          <section class="picks-section">
+            <h2 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Doofus Picks — Verified Results
+            </h2>
+            <div class="product-list" id="product-list"></div>
+          </section>
+
+          <section class="autonomy-section">
+            <h2 class="section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Your AI Autonomy Controls
+            </h2>
+            <div class="autonomy-list">
+              <div class="autonomy-item">
+                <div>
+                  <div class="autonomy-label">Use my purchase history</div>
+                  <div class="autonomy-desc">Tailors answers to your habits</div>
+                </div>
+                <label class="toggle-switch sm"><input type="checkbox" id="auto-history" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="autonomy-item">
+                <div>
+                  <div class="autonomy-label">Show source for every claim</div>
+                  <div class="autonomy-desc">Cite product pages &amp; reviews</div>
+                </div>
+                <label class="toggle-switch sm"><input type="checkbox" id="auto-sources" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+              <div class="autonomy-item">
+                <div>
+                  <div class="autonomy-label">Flag uncertain answers</div>
+                  <div class="autonomy-desc">Show confidence score</div>
+                </div>
+                <label class="toggle-switch sm"><input type="checkbox" id="auto-flag" checked /><span class="toggle-track"><span class="toggle-thumb"></span></span></label>
+              </div>
+            </div>
+            <div class="autonomy-hint" id="autonomy-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Toggle the controls above — they affect what appears beneath Doofus answers in real time. Ask a question to see it live.
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- AI OFF STATE -->
+      <section id="ai-off-state" class="state-panel" style="display:none;">
+        <div class="ai-off-banner">
+          <div class="ai-off-content">
+            <h2 class="ai-off-title">Doofus AI is turned off</h2>
+            <p class="ai-off-sub">Doofus AI is currently paused. Switch back to AI-curated shopping to see precision recommendations and autonomous insights.</p>
+          </div>
+          <button class="reenable-btn" id="reenable-btn">⚡ Turn Doofus back on</button>
+        </div>
+        <div class="standard-results-header">
+          <h3 class="standard-results-title">Standard Results</h3>
+          <div class="results-meta">
+            <span class="sort-label">Sort by: <strong>Featured</strong></span>
+            <span class="results-count">1–24 of over 20,000 results</span>
+          </div>
+        </div>
+        <div class="standard-grid" id="standard-grid"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
